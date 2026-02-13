@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio Novia</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(to bottom,#3e2b16,#1e1207);
+    color:#f5d28c;
+    overflow-x:hidden;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(6px);
+    z-index:1000;
+}
+
+nav h1{
+    font-size:22px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#f5d28c;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* ================= HERO ================= */
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    width:90%;
+    max-width:1100px;
+    flex-wrap:wrap;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    line-height:1.7;
+    font-weight:300;
+}
+
+.hero-image img{
+    width:260px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(255,215,0,0.6);
+    transition:0.5s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 45px rgba(255,215,0,0.9);
+}
+
+.btn{
+    margin-top:25px;
+    padding:10px 28px;
+    background:transparent;
+    border:2px solid #ffd27f;
+    color:#ffd27f;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.btn:hover{
+    background:#ffd27f;
+    color:#2b1a0f;
+    box-shadow:0 0 20px #ffd27f;
+}
+
+/* ================= SECTION ================= */
+section{
+    padding:120px 80px;
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s;
+}
+
+section.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.section-title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:60px;
+}
+
+/* ================= ABOUT ================= */
+.about-text{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+
+/* ================= PROJECT ================= */
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgba(255,215,0,0.05);
+    padding:25px;
+    border:1px solid rgba(255,215,0,0.3);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px rgba(255,215,0,0.4);
+}
+
+/* ================= FOOTER ================= */
+footer{
+    text-align:center;
+    padding:40px;
+    background:#140b05;
+    font-size:14px;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+    <h1>PORTOFOLIO</h1>
+    <ul>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Kontak</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h2>Halo, Saya Novia Amelia Putri</h2>
+            <p>
+                Saya adalah siswi SMK NU Ma'arif 2 Kudus jurusan TJKT 
+                yang memiliki semangat belajar tinggi dan minat besar di bidang teknologi. 
+                Saya bercita-cita menjadi seorang Web Developer yang sukses, 
+                profesional, dan mampu membanggakan orang tua serta sekolah saya.
+            </p>
+            <button class="btn">Lihat Karya</button>
+        </div>
+
+        <div class="hero-image">
+            <img src="nov.jpeg" alt="Foto Novia">
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">Tentang Saya</h2>
+    <div class="about-text">
+        <p>
+            Saat ini saya sedang menempuh pendidikan di SMK NU Ma'arif 2 Kudus. 
+            Di sekolah saya belajar tentang jaringan komputer, pemrograman, 
+            dan pengembangan website. Saya terus berlatih dan mengembangkan 
+            kemampuan agar kelak dapat meraih kesuksesan di dunia teknologi.
+        </p>
+    </div>
+</section>
+
+<!-- PROJECT -->
+<section id="project">
+    <h2 class="section-title">Project</h2>
+    <div class="projects">
+        <div class="card">
+            <h3>Website UMKM</h3>
+            <p>Website promosi produk dengan desain elegan dan responsif.</p>
+        </div>
+        <div class="card">
+            <h3>Company Profile</h3>
+            <p>Website perusahaan dengan animasi modern.</p>
+        </div>
+        <div class="card">
+            <h3>Landing Page</h3>
+            <p>Landing page dengan desain menarik dan interaktif.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Kontak</h2>
+    <p style="text-align:center;">Email: noviaameliaputri9@gmail.com</p>
+</section>
+
+<footer>
+    © 2026 Novia Amelia Putri
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+    sections.forEach(sec=>{
+        const offset = sec.offsetTop - 400;
+        if(window.scrollY > offset){
+            sec.classList.add("active");
+        }
+    });
+});
+
+document.querySelector(".btn").addEventListener("click",()=>{
+    document.querySelector("#project").scrollIntoView({behavior:"smooth"});
+});
+</script>
+
+</body>
+</html>
